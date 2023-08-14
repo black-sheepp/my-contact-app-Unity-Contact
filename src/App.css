@@ -234,7 +234,7 @@
 .search-input{
   margin: 30px 5px 30px 0px;
   border: 2px solid black;
-  width: 270px;
+  width: 280px;
   padding: 8px 22px;
   border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -488,92 +488,100 @@
 /* _______________________________________ADD NEW CONTACT FORM__________________________________________ */
 
 /* _______________________________________CREATE NEW BUTTON__________________________________________ */
-.cta {
-  display: flex;
-  padding: 11px 33px;
-  text-decoration: none;
-  font-family: 'Poppins', sans-serif;
-  font-size: 25px;
-  color: white;
-  background: #6225E6;
-  transition: 1s;
-  box-shadow: 6px 6px 0 black;
-  transform: skewX(-15deg);
-  border: none;
-  margin-top: 20px;
-  float: left;
-}
 
-.cta:focus {
-  outline: none;
-}
-
-.cta:hover {
-  transition: 0.5s;
-  box-shadow: 10px 10px 0 #dd1c1a;
-}
-
-.cta .second {
-  transition: 0.5s;
-  margin-right: 0px;
-}
-
-.cta:hover  .second {
-  transition: 0.5s;
-  margin-right: 45px;
-}
-
-.span {
-  transform: skewX(15deg);
-  font-size: 20px;
-  -webkit-transform: skewX(15deg);
-  -moz-transform: skewX(15deg);
-  -ms-transform: skewX(15deg);
-  -o-transform: skewX(15deg);
-}
-
-.second {
-  width: 20px;
-  margin-left: 30px;
+.button {
   position: relative;
-  top: 12%;
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #7d2ae8;
+  transition: all 0.2s ease;
+  height: 45px;
+  margin-top: 30px;
 }
 
-.one {
-  transition: 0.4s;
-  transform: translateX(-60%);
+.button:active {
+  transform: scale(0.96);
 }
 
-.two {
-  transition: 0.5s;
-  transform: translateX(-30%);
+.button:before,
+.button:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
 }
 
-.cta:hover .three {
-  animation: color_anim 1s infinite 0.2s;
+.button:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
 }
 
-.cta:hover .one {
-  transform: translateX(0%);
-  animation: color_anim 1s infinite 0.6s;
-}
-
-.cta:hover .two {
-  transform: translateX(0%);
-  animation: color_anim 1s infinite 0.4s;
-}
-
-@keyframes color_anim {
+@keyframes greentopBubbles {
   0% {
-    fill: white;
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
   }
 
   50% {
-    fill: #dd1c1a;
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
   }
 
   100% {
-    fill: white;
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.button:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
 }
 /* _______________________________________CREATE NEW BUTTON__________________________________________ */

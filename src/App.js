@@ -2,7 +2,7 @@ import "./App.css";
 import ContactList from "./Components/ContactList";
 import CreateNewContactButton from "./Components/CreateNewContactButton";
 import Nav from "./Components/Nav";
-import SearchBar from "./Components/SearchBar";
+
 
 function App() {
 	return (
@@ -14,12 +14,15 @@ function App() {
 						<p className='text-black text-5xl font-bold'>Stay</p>
 						<p className='text-4xl font-bold text-[#7d2ae8]'>in touch</p>
 					</div>
-					<SearchBar />
-				</div>
-				<ContactList/>
-				<div className='ml-60'>
+					<div>
+						<input type='text' placeholder='Search Contact...' className='search-input' />
+						<button type='submit' className='search-btn'>
+							Search
+						</button>
+					</div>
 					<CreateNewContactButton />
 				</div>
+				<ContactList />
 			</div>
 		</div>
 	);
