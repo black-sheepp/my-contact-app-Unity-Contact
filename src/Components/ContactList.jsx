@@ -18,10 +18,10 @@ const ContactList = () => {
 					<p className='text-lg text-[#2d00f7] w-1/5'>9845888500</p>
 					<p className=' text-[#7d8597] w-1/4'>shivamguptanitw@gmail.com</p>
 					<div className='flex justify-between'>
-                              <Link>
+                              <Link to={'/view-contact'}>
                               <FontAwesomeIcon icon={faBookOpenReader} size='xl' style={{color: "#1f5131",}} className='mx-2'/>
                               </Link>
-                              <Link>
+                              <Link to={'/edit-contact'}>
 						<FontAwesomeIcon icon={faFilePen} size='xl' style={{ color: "#ff6f59" }} className='mx-2'/>
                               </Link>
                               <Link>

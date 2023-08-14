@@ -585,4 +585,57 @@
   }
 }
 /* _______________________________________CREATE NEW BUTTON__________________________________________ */
+/* _______________________________________VIEW CONTACT__________________________________________ */
+.h2 {
+  font: 300 33px/40px 'Open Sans', sans-serif;
+  color: #ff1654;
+  margin: 0 0 23px;
+  font-weight: bold;
+}
+.h3 {
+  font: 13px/20px 'Open Sans', sans-serif;
+  color: #fec5bb;
+  margin: 0 0 6px;
+  font-size: large;
+}
+.para {
+  margin-bottom: 24px;
+  font: 13px/20px 'Open Sans', sans-serif;
+  font-size: large;
+  color: #fdffb6;
+}
+
+hr {
+    background-color: #51596d;
+    border: none;
+    height: 1px;
+    margin: 0 0 21px;
+}
+
+.contact {
+  padding: 63px 85px 50px 80px;
+  color: #8391ab;
+  width: 550px;
+  background-color: #14163D;
+  margin: 60px auto;
+  border-radius: 20px;
+}
+.prefix {
+  width: 55px;
+  display: inline-block;
+  padding: 5px 0px;
+}
+.email {
+  color: #ffffff;
+  margin-left: 5px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  padding: 5px 0px;
+}
+.email:hover {
+  color: #f72585;
+  text-decoration: none;
+}
+
+/* _______________________________________VIEW CONTACT__________________________________________ */
 
