@@ -1,29 +1,20 @@
 import "./App.css";
-import ContactList from "./Components/ContactList";
-import CreateNewContactButton from "./Components/CreateNewContactButton";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Nav from "./Components/Nav";
-
+import ContactList from "./Components/ContactList";
+import FormContact from "./Components/FormContact";
 
 function App() {
 	return (
 		<div>
-			<div className='contact-app-header'>
-				<Nav />
-				<div className='ml-60 mr-60 mt-4 flex justify-between'>
-					<div>
-						<p className='text-black text-5xl font-bold'>Stay</p>
-						<p className='text-4xl font-bold text-[#7d2ae8]'>in touch</p>
-					</div>
-					<div>
-						<input type='text' placeholder='Search Contact...' className='search-input' />
-						<button type='submit' className='search-btn'>
-							Search
-						</button>
-					</div>
-					<CreateNewContactButton />
-				</div>
-				<ContactList />
-			</div>
+			<Router>
+				<Routes>
+					<Route path='/' element={<Nav />}>
+						<Route path='/contactlist' element={<ContactList />} />
+						<Route path='/add-contact' element={<FormContact />} />
+					</Route>
+				</Routes>
+			</Router>
 		</div>
 	);
 }
