@@ -1,0 +1,34 @@
+{
+    "contacts" : [
+        {
+            "id" : "123",
+            "name" : "Shivam K Gupta",
+            "phone" : "9809170708",
+            "email" : "shivam@hivemind.com",
+            "gender" : "Male",
+            "group" : "colleague",
+            "address" : "New Delhi",
+            "socialLink" : "www.instagram.com/shivamkgputa"
+        },
+        {
+            "id" : "122",
+            "name" : "Saurav K Gupta",
+            "phone" : "9898670708",
+            "email" : "saurabh@hivemind.com",
+            "gender" : "Male",
+            "group" : "colleague",
+            "address" : "New Delhi",
+            "socialLink" : "www.instagram.com/saurabh"
+        },
+        {
+            "id" : "125",
+            "name" : "Rohan Joshi",
+            "phone" : "8967543254",
+            "email" : "rohan@hivemind.com",
+            "gender" : "Male",
+            "group" : "colleague",
+            "address" : "Bnagalore",
+            "socialLink" : "www.instagram.com/rohan"
+        }
+    ]
+}

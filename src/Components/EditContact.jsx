@@ -5,9 +5,9 @@ const EditContact = () => {
     <div>
       <div>
         <div className='flex justify-center mt-16'>
-          <div className='flex flex-col w-1/2 bg-[#bee3db] rounded-2xl p-5'>
+          <div className='flex flex-col w-1/2 bg-[#ffddd2] rounded-2xl p-5'>
             <div className='flex justify-center'>
-              <h3 className='text-lg font-bold mb-2 text-3xl text-[#05668d]'>Edit Contact</h3>
+              <h3 className='text-lg font-bold mb-2 text-[30px] text-[#ef233c]'>Edit Contact</h3>
             </div>
             <div className='flex'>
               <div className='mr-12 ml-12 text-end text-lg font-semibold text-[#000814]'>
@@ -21,37 +21,37 @@ const EditContact = () => {
               </div>
               <div className=' text-lg flex flex-col'>
                 <input
-                  className='bg-[#bee3db] w-96 text-[#00000]'
+                  className='bg-[#ffddd2] w-96 text-[#00000]'
                   type='text'
                   placeholder='Shivam Gupta'
                 />
                 <input
-                  className='bg-[#bee3db] w-96 text-[#00000]'
+                  className='bg-[#ffddd2] w-96 text-[#00000]'
                   type='number'
                   placeholder='9845888500'
                 />
                 <input
-                  className='bg-[#bee3db] w-96 text-[#00000]'
+                  className='bg-[#ffddd2] w-96 text-[#00000]'
                   type='email'
                   placeholder='shivamguptanitw@gmail.com'
                 />
                 <input
-                  className='bg-[#bee3db] w-96 text-[#00000]'
+                  className='bg-[#ffddd2] w-96 text-[#00000]'
                   type='text'
                   placeholder='Male'
                 />
                 <input
-                  className='bg-[#bee3db] w-96 text-[#00000]'
+                  className='bg-[#ffddd2] w-96 text-[#00000]'
                   type='text'
                   placeholder='Colleage'
                 />
                 <input
-                  className='bg-[#bee3db] w-96 text-[#00000]'
+                  className='bg-[#ffddd2] w-96 text-[#00000]'
                   type='text'
                   placeholder='New Delhi'
                 />
                 <input
-                  className='bg-[#bee3db] w-96 text-[#00000]'
+                  className='bg-[#ffddd2] w-96 text-[#00000]'
                   type='text'
                   placeholder='facebook.com/shivam'
                 />
