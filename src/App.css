@@ -330,6 +330,15 @@
 
 
 /* _______________________________________ADD NEW CONTACT FORM__________________________________________ */
+
+.contact-form{
+  display: block;
+  position: fixed;
+  margin: 0;
+  padding: 100px;
+  top: 8%;
+  left: 29%;
+}
 .form_container {
 
   height: fit-content;
@@ -345,10 +354,6 @@
     0px 7px 15px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
   border-radius: 11px;
   border: 2px solid black;
-}
-
-.logo_container {
-
 }
 
 .title_container {
