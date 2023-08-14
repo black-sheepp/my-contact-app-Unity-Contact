@@ -334,7 +334,7 @@
 .contact-form{
   display: block;
   position: fixed;
-  margin: 0;
+  margin: 20px auto;
   padding: 100px;
   top: 8%;
   left: 29%;
@@ -585,6 +585,8 @@
   }
 }
 /* _______________________________________CREATE NEW BUTTON__________________________________________ */
+
+
 /* _______________________________________VIEW CONTACT__________________________________________ */
 .h2 {
   font: 300 33px/40px 'Open Sans', sans-serif;
@@ -615,7 +617,7 @@ hr {
 .contact {
   padding: 63px 85px 50px 80px;
   color: #8391ab;
-  width: 550px;
+  width: 650px;
   background-color: #14163D;
   margin: 60px auto;
   border-radius: 20px;

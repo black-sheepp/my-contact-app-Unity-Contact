@@ -4,10 +4,10 @@ const EditContact = () => {
   return (
     <div>
       <div>
-        <div className='flex justify-center'>
+        <div className='flex justify-center mt-16'>
           <div className='flex flex-col w-1/2 bg-[#bee3db] rounded-2xl p-5'>
             <div className='flex justify-center'>
-              <h3 className='text-lg font-bold mb-2'>Edit Contact</h3>
+              <h3 className='text-lg font-bold mb-2 text-3xl text-[#05668d]'>Edit Contact</h3>
             </div>
             <div className='flex'>
               <div className='mr-12 ml-12 text-end text-lg font-semibold text-[#000814]'>
