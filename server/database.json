@@ -299,6 +299,16 @@
       "group": "Colleague",
       "address": "San Francisco, CA",
       "socialLink": "www.linkedin.com/in/mateo_j"
+    },
+    {
+      "name": "Shivam K Gupta",
+      "phone": "8743985421",
+      "email": "saurabhmishra@hivemind.com",
+      "gender": "Male",
+      "group": "Colleague",
+      "address": "Bhopal, MP",
+      "socialLink": "www.insta.com/shivam",
+      "id": "3WlMwS-"
     }
   ]
 }

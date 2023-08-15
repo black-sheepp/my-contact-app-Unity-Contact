@@ -1,10 +1,9 @@
-import React, { useState  } from "react";
+import React, { useState } from "react";
 import Logo from "./Logo";
 import { ContactServices } from "../Services/ContactServices";
 import { useNavigate } from "react-router-dom";
 
 const FormContact = () => {
-
 	let navigate = useNavigate();
 
 	let [state, setState] = useState({
@@ -33,20 +32,20 @@ const FormContact = () => {
 
 	let submitForm = async (event) => {
 		event.preventDefault();
-		try{
-			let response = await ContactServices.createNewContact(state.contact); 
-			if(response){
-				navigate('/',{replace: true});
+		try {
+			let response = await ContactServices.createNewContact(state.contact);
+			if (response) {
+				navigate("/", { replace: true });
 			}
-		}catch(error){
+		} catch (error) {
 			setState({
 				...state,
 				loading: false,
 				errorMessage: error.message,
 			});
-			navigate('/add-contact',{replace: false})
+			navigate("/add-contact", { replace: false });
 		}
-	}
+	};
 
 	let { loading, contact, errorMessage } = state;
 
@@ -129,14 +128,16 @@ const FormContact = () => {
 							<label className='input_label' htmlFor='category_field'>
 								Groups or Category
 							</label>
-							<select id='category_field' className='input_field'
-							name='group'
-							value={contact.group}
-							required={true}
-							onChange={updateInput}>
+							<select
+								id='category_field'
+								className='input_field'
+								name='group'
+								value={contact.group}
+								required={true}
+								onChange={updateInput}>
 								<option value='Office'>Office</option>
 								<option value='Family'>Family</option>
-								<option value='Collegue'>Collegue</option>
+								<option value='Colleague'>Colleague</option>
 								<option value='Friend'>Friend</option>
 							</select>
 						</div>
