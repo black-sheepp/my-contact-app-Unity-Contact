@@ -52,7 +52,7 @@ const EditContact = () => {
 								<p>Gender: </p>
 								<p>Groups or Categories: </p>
 								<p>Address: </p>
-								<p>Social Media Profiles: </p>
+								<p>Social Media : </p>
 							</div>
 							<div className=' text-lg flex flex-col'>
 								<input

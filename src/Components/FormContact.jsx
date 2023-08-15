@@ -120,13 +120,14 @@ const FormContact = () => {
 								value={contact.gender}
 								required={true}
 								onChange={updateInput}>
+								<option value=''>Select Gender</option>
 								<option value='Male'>Male</option>
 								<option value='Female'>Female</option>
 							</select>
 						</div>
 						<div className='input_container'>
 							<label className='input_label' htmlFor='category_field'>
-								Groups or Category
+								Groups
 							</label>
 							<select
 								id='category_field'
@@ -135,6 +136,7 @@ const FormContact = () => {
 								value={contact.group}
 								required={true}
 								onChange={updateInput}>
+								<option value=''>Select Group</option>
 								<option value='Office'>Office</option>
 								<option value='Family'>Family</option>
 								<option value='Colleague'>Colleague</option>
