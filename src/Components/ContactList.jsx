@@ -6,6 +6,7 @@ import { ContactServices } from "../Services/ContactServices";
 import Loader from "../Components/Loader";
 
 const ContactList = () => {
+
 	let [state, setState] = useState({
 		loading: false,
 		contacts: [],

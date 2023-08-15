@@ -1,26 +1,6 @@
 {
   "contacts": [
     {
-      "id": "021",
-      "name": "Scarlett Lewis",
-      "phone": "6665554444",
-      "email": "scarlett@example.com",
-      "gender": "Female",
-      "group": "Colleague",
-      "address": "Las Vegas, NV",
-      "socialLink": "www.instagram.com/scarlett_l"
-    },
-    {
-      "id": "022",
-      "name": "Henry Clark",
-      "phone": "2221119999",
-      "email": "henry@example.com",
-      "gender": "Male",
-      "group": "Friend",
-      "address": "Raleigh, NC",
-      "socialLink": "www.linkedin.com/in/henry_clark"
-    },
-    {
       "id": "023",
       "name": "Aria Hall",
       "phone": "7776665555",

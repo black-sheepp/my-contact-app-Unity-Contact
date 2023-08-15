@@ -17,10 +17,10 @@ const Nav = () => {
 						<p className='text-4xl font-bold text-[#7d2ae8]'>in touch</p>
 					</div>
 					<div>
-						<input type='text' placeholder='Search Contact...' className='search-input' />
+						{/* <input type='text' placeholder='Search Contact...' className='search-input' />
 						<button type='submit' className='search-btn'>
 							Search
-						</button>
+						</button> */}
 					</div>
 					<Link to={"/add-contact"} className='button'>
 						Add Contact
