@@ -14,8 +14,8 @@ function App() {
 					<Route path='/' element={<Nav />}>
 						<Route path='/' element={<ContactList />} />
 						<Route path='/add-contact' element={<FormContact />} />
-						<Route path='/view-contact' element={<ViewContact />} />
-						<Route path='/edit-contact' element={<EditContact />} />
+						<Route path='/view-contact/:contactId' element={<ViewContact />} />
+						<Route path='/edit-contact/:contactId' element={<EditContact />} />
 					</Route>
 				</Routes>
 			</Router>

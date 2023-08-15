@@ -1,12 +1,60 @@
-import React from "react";
+import React, { useState  } from "react";
 import Logo from "./Logo";
+import { ContactServices } from "../Services/ContactServices";
+import { useNavigate } from "react-router-dom";
 
 const FormContact = () => {
+
+	let navigate = useNavigate();
+
+	let [state, setState] = useState({
+		loading: false,
+		contact: {
+			name: "",
+			phone: "",
+			email: "",
+			gender: "",
+			group: "",
+			address: "",
+			socialLink: "",
+		},
+		errorMessage: "",
+	});
+
+	let updateInput = (event) => {
+		setState({
+			...state,
+			contact: {
+				...state.contact,
+				[event.target.name]: event.target.value,
+			},
+		});
+	};
+
+	let submitForm = async (event) => {
+		event.preventDefault();
+		try{
+			let response = await ContactServices.createNewContact(state.contact); 
+			if(response){
+				navigate('/',{replace: true});
+			}
+		}catch(error){
+			setState({
+				...state,
+				loading: false,
+				errorMessage: error.message,
+			});
+			navigate('/add-contact',{replace: false})
+		}
+	}
+
+	let { loading, contact, errorMessage } = state;
+
 	return (
 		<div className='contact-comp'>
 			<div className='flex justify-center w-full contact-form'>
 				<div className='w-1/3'>
-					<form className='form_container'>
+					<form onSubmit={submitForm} className='form_container'>
 						<div className='logo_container'>
 							<Logo />
 						</div>
@@ -21,7 +69,10 @@ const FormContact = () => {
 							<input
 								placeholder='Will Smith'
 								title='Inpit title'
-								name='input-name'
+								name='name'
+								value={contact.name}
+								required={true}
+								onChange={updateInput}
 								type='text'
 								className='input_field'
 								id='name_field'
@@ -34,7 +85,10 @@ const FormContact = () => {
 							<input
 								placeholder='9845660000'
 								title='Inpit title'
-								name='input-name'
+								name='phone'
+								value={contact.phone}
+								required={true}
+								onChange={updateInput}
 								type='number'
 								className='input_field'
 								id='phone_field'
@@ -47,7 +101,10 @@ const FormContact = () => {
 							<input
 								placeholder='WillSmith@abc.com'
 								title='Inpit title'
-								name='input-name'
+								name='email'
+								value={contact.email}
+								required={true}
+								onChange={updateInput}
 								type='email'
 								className='input_field'
 								id='email_field'
@@ -57,19 +114,30 @@ const FormContact = () => {
 							<label className='input_label' htmlFor='gender_field'>
 								Gender
 							</label>
-							<select id='gender_field' className='input_field'>
-								<option value='male'>Male</option>
-								<option value='female'>Female</option>
+							<select
+								id='gender_field'
+								className='input_field'
+								name='gender'
+								value={contact.gender}
+								required={true}
+								onChange={updateInput}>
+								<option value='Male'>Male</option>
+								<option value='Female'>Female</option>
 							</select>
 						</div>
 						<div className='input_container'>
 							<label className='input_label' htmlFor='category_field'>
 								Groups or Category
 							</label>
-							<select name='' id='category_field' className='input_field'>
-								<option value='office'>Office</option>
-								<option value='office'>Home</option>
-								<option value='office'>College</option>
+							<select id='category_field' className='input_field'
+							name='group'
+							value={contact.group}
+							required={true}
+							onChange={updateInput}>
+								<option value='Office'>Office</option>
+								<option value='Family'>Family</option>
+								<option value='Collegue'>Collegue</option>
+								<option value='Friend'>Friend</option>
 							</select>
 						</div>
 						<div className='input_container'>
@@ -79,7 +147,10 @@ const FormContact = () => {
 							<input
 								placeholder='New York'
 								title='Inpit title'
-								name='input-name'
+								name='address'
+								value={contact.address}
+								required={true}
+								onChange={updateInput}
 								type='text'
 								className='input_field'
 								id='address_field'
@@ -92,7 +163,10 @@ const FormContact = () => {
 							<input
 								placeholder='www.instagram.com/WillSmith'
 								title='Inpit title'
-								name='input-name'
+								name='socialLink'
+								value={contact.socialLink}
+								required={true}
+								onChange={updateInput}
 								type='text'
 								className='input_field'
 								id='socialmedia_field'
