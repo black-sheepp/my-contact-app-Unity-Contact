@@ -1,16 +1,6 @@
 {
   "contacts": [
     {
-      "id": "023",
-      "name": "Aria Hall",
-      "phone": "7776665555",
-      "email": "aria@example.com",
-      "gender": "Female",
-      "group": "Family",
-      "address": "Tampa, FL",
-      "socialLink": "www.facebook.com/aria.hall"
-    },
-    {
       "id": "024",
       "name": "Jackson Martin",
       "phone": "3332221111",
@@ -81,14 +71,14 @@
       "socialLink": "www.linkedin.com/in/mateo_j"
     },
     {
-      "name": "Shivam K Gupta",
-      "phone": "8743985421",
-      "email": "saurabhmishra@hivemind.com",
+      "name": "Shivam Gupta",
+      "phone": "9988877667",
+      "email": "shivam@gmail.com",
       "gender": "Male",
-      "group": "Office",
-      "address": "Bangalore, Karnataka-560077, India",
+      "group": "Family",
+      "address": "NIT WARANGAL, Telangana",
       "socialLink": "www.insta.com/shivam",
-      "id": "-py-W1Z"
+      "id": "1h3wYbb"
     }
   ]
 }
