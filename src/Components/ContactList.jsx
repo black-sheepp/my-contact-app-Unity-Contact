@@ -16,10 +16,10 @@ const ContactList = () => {
 		try {
 			setState({ ...state, loading: true });
 			let response = await ContactServices.getALlContacts();
-			setState({ 
-				...state, 
-				loading: false, 
-				contacts: response.data 
+			setState({
+				...state,
+				loading: false,
+				contacts: response.data,
 			});
 		} catch (error) {
 			setState({
@@ -33,6 +33,27 @@ const ContactList = () => {
 	useEffect(() => {
 		fetchContacts();
 	}, []);
+
+	let clickDelete = async (contactId) => {
+		try {
+			let response = await ContactServices.deleteContact(contactId);
+			if (response) {
+				setState({ ...state, loading: true });
+				let response = await ContactServices.getALlContacts();
+				setState({
+					...state,
+					loading: false,
+					contacts: response.data,
+				});
+			}
+		} catch (error) {
+			setState({
+				...state,
+				loading: false,
+				errorMessage: error.message,
+			});
+		}
+	};
 
 	let { loading, contacts, errorMessage } = state;
 
@@ -71,7 +92,7 @@ const ContactList = () => {
 												className='mx-2'
 											/>
 										</Link>
-										<Link>
+										<Link onClick={() => clickDelete(contact.id)}>
 											<FontAwesomeIcon
 												icon={faTrash}
 												size='xl'
